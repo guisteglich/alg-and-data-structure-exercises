@@ -23,7 +23,11 @@ def isBalanced(s):
                 return 'NO'
             elif elem != dict[stack.get()]:
                 return 'NO'
-    return "YES"
+    if len(stack.values) > 0:
+        return 'NO'
+    else:
+        return 'YES'
+
     
 # print(isBalanced('{[()]}'))
 # print(isBalanced('{[(])}'))
